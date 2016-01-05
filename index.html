@@ -1,41 +1,55 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Mini-projet LiteTalk</title>
 		<meta charset="utf-8">
-        <!-- css -->
+		<title>Mini-projet LiteTalk</title>
+ 
 		<link  href="main.css" rel="stylesheet"/>
-        <!-- js lib -->
-        <script src='litetalk.code.js'></script>
-        <!-- js src -->
-        <script src="main.js"></script>
+	        <script src='litetalk.code.js'></script>
+	        <script src="main.js"></script>
 	</head>
     
 	<body>
-        
-        <h1> The page of Doge </h1>
-        
-		<div style="position:relative; left:50px; top:0px; height:360px; width:500px; border:0px solid red;">
-            <div style="position:absolute; left:0px; top:0px; height:360px; width:300px; border:0px solid blue;">
-                <textarea id="dogeballoon" cols="30" rows="2" spellcheck="false" style="overflow:hidden; border:hidden; visibility:hidden; font-family:Comic Sans MS;">.</textarea>
-                <br />
-                <div style="position:absolute; top:60px;">
-                    <img id="dogepict" src="./images/doge.jpeg" width="280" height="300" alt="doge" onClick="BOT_standardSwitchToChar('dogeBot');" />
-                </div>
-            </div>
-        </div>
+		<div id="game">
+			<div id="window1">
+				<img class="photo1" id="dogepict" src="./images/doge.jpeg" alt="doge" onClick="BOT_standardSwitchToChar('dogeBot');" />
+				
+				<div class="answersframe">
+					<textarea class="answers" id="dogeballoon" spellcheck="false"></textarea>
+				</div>
 
-        <div style="position:relative; left:50px; top:20px; height:520px; width:500px; border:0px solid red;">
-            <input id="litetalkchatbox" type="text" size="55" value="ask toto"  onKeyPress="BOT_chatboxOnKeypress(this,event);"> &nbsp;
-            <input type="submit" name="sendButton" id="sendButton" value="SEND" onClick="BOT_chatboxOnSend('litetalkchatbox');"> &nbsp;
-            <input type="button" value="+"  onClick="BOT_switchTraceBox(this);">
-            <br />
-            <div id="litetalkstatustext" align="left" style= "font-family:Verdana, Geneva, sans-serif;  font-size:10px; width:450px; height:80px; border:0px solid pink;">.</div>
-            <br />
-            <p>
-                <textarea id="litetalktracebox" cols="55" rows="20" spellcheck="false" style="visibility:hidden;">.</textarea>
-            </p> 
-        </div>
+				<div class="chatboxframe">
+					<input class="chatbox" id="litetalkchatbox" type="text" value="ask toto" onKeyPress="BOT_chatboxOnKeypress(this,event);">
+					<div class="buttons">		    			
+						<input type="submit" name="sendButton" id="sendButton" value="SEND" onClick="BOT_chatboxOnSend('litetalkchatbox');">
+		    				<input type="button" value="+"  onClick="BOT_switchTraceBox(this);">
+
+					</div>
+				</div>
+			</div>
+
+			<div id="window2">
+				<img class="photo2" id="id1" src="./images/doge.jpeg" alt="doge" onClick="BOT_standardSwitchToChar('dogeBot');" />
+				
+				<div class="answersframe">
+					<textarea class="answers" id="id2" spellcheck="false"></textarea>
+				</div>
+
+				<div class="chatboxframe">
+					<input class="chatbox" id="id3" type="text" value="ask toto" onKeyPress="BOT_chatboxOnKeypress(this,event);">
+					<div class="buttons">		    			
+						<input type="submit" name="sendButton" id="id4" value="SEND" onClick="BOT_chatboxOnSend('litetalkchatbox');">
+		    				<input type="button" value="+"  onClick="BOT_switchTraceBox(this);">
+
+					</div>
+				</div>
+			</div>
+
+			<div id="window3"><textarea id="notebook" spellcheck="false"></textarea></div>
+
+			<div id="litetalkstatustext" ></div>
+                	<textarea id="litetalktracebox" spellcheck="false" style="visibility:hidden;"></textarea>
+		</div>
         
         <script type="text/javascript">
             BOT_theInterface 	= "STANDARD";
@@ -43,7 +57,7 @@
             BOT_statusFlag		= true; 
             BOT_standardFrameBot('dogeBot','visible','4px solid yellow');
         </script> 
-            
+
 	</body>
             
 </html>
