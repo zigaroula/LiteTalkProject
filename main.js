@@ -1,9 +1,72 @@
-var dogeTopic = [
-	[["KEY", "_class"],						["VAL", "bot"], ["BOT","dogeBot"]],
-    [["KEY", "_htmlprefix"],				["VAL", "doge"]],
-    [["KEY", "toto"],                       ["VAL", 2], ["TYPE", "INT"], ["ONASK", "Wow, such toto"]]
+var johnTopic = [
+	[["KEY", "_class"],                 ["VAL", "bot"], ["BOT","johnBot"]],
+    [["KEY", "_htmlprefix"],            ["VAL", "john"]],
+    [["KEY", "toto"],                   ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "enfant"],                 ["VAL", "Oui, j’ai une fille et un garçon. Chaque matin, ma femme leur prépare leur goûter."], ["TYPE", "STR"]],
+    [["KEY", "gouterenfant"],           ["VAL", "Soucieuse de la santé de mes enfants, ma femme mets toujours des fruits dans leur panier pour le goûter."], ["TYPE", "STR"]],
+    [["KEY", "gouterbanane"],           ["VAL", "Oui, c’est probable."], ["TYPE", "STR"]],
+    [["KEY", "etude"],                  ["VAL", "J’ai étudié à l’UPMC."], ["TYPE", "STR"]],
+    [["KEY", "etudesmanger"],           ["VAL", "La file d’attente pour manger au restaurant universitaire était trop longue, donc j’achetais souvent de la nourriture dans les fast-food proches ou dans un supermarché."], ["TYPE", "STR"]],
+    [["KEY", "dernierefoiscollegue"],   ["VAL", "Je l’ai vu ce matin lors d’une réunion concernant l’avenir de la section nouvellement créée dans l’entreprise."], ["TYPE", "STR"]],
+    [["KEY", "heureincident"],          ["VAL", "De ce que j’ai entendu, l’incident s’est produit vers 17h30 hier."], ["TYPE", "STR"]],
+    [["KEY", "heuredejeuner"],          ["VAL", "Je prends toujours ma pause déjeuner à 11h45 pour être de retour au travail vers 12h30."], ["TYPE", "STR"]],
+    [["KEY", "bananesdessert"],         ["VAL", "Vous savez bien que les bananes sont interdites sur le lieu de travail, il est donc normal que le restaurant administratif n’en serve pas."], ["TYPE", "STR"]],
+    [["KEY", "quandentreprise"],        ["VAL", "Celà fait maintenant 2 ans que je travaille dans l’entreprise."], ["TYPE", "STR"]],
+    [["KEY", "age"],                    ["VAL", "J’ai eu 27 ans la semaine dernière."], ["TYPE", "STR"]],
+    [["KEY", "promotion"],              ["VAL", "J’ai reçu ma première promotion il y a 4 mois."], ["TYPE", "STR"]],
+    [["KEY", "colleguecoupable"],       ["VAL", "Je ne pense pas que mon collègue soit le coupable, il est bien trop consciencieux pour faire une telle chose. Mais je peux vous assurer qu’il ne s’agit pas de moi non plus."], ["TYPE", "STR"]],
+    [["KEY", "renvoi"],                 ["VAL", "Je suis extrèmement déçu par vos accusations."], ["TYPE", "STR"]],
+    [["KEY", "secretaire"],             ["VAL", "Le dossier sur lequel je travaille exige des déplacements permanents."], ["TYPE", "STR"]],
+    [["KEY", "mentir"],                 ["VAL", "Ah ça non, jamais !"], ["TYPE", "STR"]],
+    [["KEY", "contredire"],             ["VAL", "Il préfère probablement accuser à tort pour se sauver."], ["TYPE", "STR"]],
+    [["KEY", "colleguementir"],         ["VAL", "Non, il est trop consciencieux pour ça."], ["TYPE", "STR"]],
+    [["KEY", "fruitprefere"],           ["VAL", "J’aime beaucoup les fraises."], ["TYPE", "STR"]],
+    [["KEY", "mangerbanane"],           ["VAL", "Je suis allergique aux bananes."], ["TYPE", "STR"]],
+    [["KEY", "victime"],                ["VAL", "Oui, c’est même elle qui m’a poussé à rejoindre l’entreprise. Quel dommage qu’il lui soit arrivé un tel incident."], ["TYPE", "STR"]],
+    [["KEY", "heureincident"],          ["VAL", "Lorsque ça a eu lieu, j’étais en train de travailler sur le dernier dossier."], ["TYPE", "STR"]],
+    [["KEY", "coupable"],               ["VAL", "Non, s’il-vous-plait, ne me renvoyez pas !"], ["TYPE", "STR"]],
+    [["KEY", "tempslibre"],             ["VAL", "Quand je ne suis pas avec des amis, je joue aux jeux vidéo."], ["TYPE", "STR"]],
+    [["KEY", "concierge"],              ["VAL", "Il a dû me confondre avec quelqu’un d’autre"], ["TYPE", "STR"]],
+    [["KEY", "entreprise"],             ["VAL", "C’est une opportunité unique pour moi d’en faire partie."], ["TYPE", "STR"]],
+    [["KEY", "zimbabwe"],               ["VAL", "Bien évidemment, nous pourrions ainsi enquêter directement sur cette histoire de bananes."], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "toto"],                          ["VAL", "Wow, such toto"], ["TYPE", "STR"]]
+    
 ];
 
-var dogeBot = new BOT_makeBot("dogeBot","dogeTopic");
-BOT_theBotId		= "dogeBot";
-BOT_theTopicId		= "dogeTopic";
+var bobTopic = [
+    [["KEY", "_class"],                 ["VAL", "bot"], ["BOT","bobBot"]],
+    [["KEY", "_htmlprefix"],            ["VAL", "bob"]],
+    [["KEY", "toto"],                   ["VAL", "Wow, such toto"], ["TYPE", "STR"]],
+    [["KEY", "enfant"],                 ["VAL", "Oui, j’ai une fille et un garçon. Chaque matin, ma femme leur prépare leur goûter."], ["TYPE", "STR"]],
+    [["KEY", "gouterenfant"],           ["VAL", "Soucieuse de la santé de mes enfants, ma femme mets toujours des fruits dans leur panier pour le goûter."], ["TYPE", "STR"]],
+    [["KEY", "gouterbanane"],           ["VAL", "Oui, c’est probable."], ["TYPE", "STR"]],
+    
+];
+
+var johnBot = new BOT_makeBot("johnBot","johnTopic");
+var bobBot = new BOT_makeBot("bobBot","bobTopic");
+BOT_theBotId		= "johnBot";
+BOT_theTopicId		= "johnTopic";
