@@ -16,7 +16,7 @@
 				div2.value="";
 				BOT_chatboxOnSend('litetalkchatbox');
 
-				div2.value=div1.value;
+				div2.value="ask ".concat(div1.value);
 				BOT_chatboxOnSend('litetalkchatbox');		
 			}
 
@@ -97,8 +97,8 @@
 
         <script type="text/javascript">
             BOT_theInterface 	= "STANDARD";
-            BOT_traceFlag		= false; 
-            BOT_statusFlag		= true; 
+            BOT_traceFlag	= false; 
+            BOT_statusFlag	= true; 
             BOT_standardFrameBot('dogeBot','visible','4px solid yellow');
         </script> 
 
