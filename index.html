@@ -7,50 +7,94 @@
 		<link  href="main.css" rel="stylesheet"/>
 	        <script src='litetalk.code.js'></script>
 	        <script src="main.js"></script>
+		<script> 
+			function botRequest(string) {
+
+				var div1 = document.getElementById(string.concat("Chat"));
+				var div2 = document.getElementById('litetalkchatbox');
+				selectBot(string);
+				div2.value="";
+				BOT_chatboxOnSend('litetalkchatbox');
+
+				div2.value=div1.value;
+				BOT_chatboxOnSend('litetalkchatbox');		
+			}
+
+			function selectBot(string) {
+				BOT_theBotId		= string.concat("Bot");
+				BOT_theTopicId		= string.concat("Topic");
+			}
+
+			function onChatEnter(string,evt) {
+				//alert("toto");
+				if(BOT_theNavigator == null) return;
+				if(BOT_theNavigator == "IE" && evt.keyCode == 13) {
+					evt.keyCode = null;
+					botRequest(string);
+				}
+				if(BOT_theNavigator == "NN" && evt.which == 13)  {
+					botRequest(string);
+				}
+			}
+
+			function switchTrace(attr) {
+				var div1 = document.getElementById("traceFrame");
+				if(div1.style.visibility==="visible")
+					div1.style.visibility="hidden";
+				else
+					div1.style.visibility="visible";
+				BOT_switchTraceBox(attr);
+			}
+		</script>
 	</head>
     
 	<body>
 		<div id="game">
 			<div id="window1">
-				<img class="photo1" id="dogepict" src="./images/doge.jpeg" alt="doge" onClick="BOT_standardSwitchToChar('dogeBot');" />
+				<img class="photo1" id="johnpict" src="./images/john.png" alt="john" />
 				
 				<div class="answersframe">
-					<textarea class="answers" id="dogeballoon" spellcheck="false"></textarea>
+					<textarea class="answers" id="johnballoon" spellcheck="false"></textarea>
 				</div>
 
 				<div class="chatboxframe">
-					<input class="chatbox" id="litetalkchatbox" type="text" value="ask toto" onKeyPress="BOT_chatboxOnKeypress(this,event);">
+					<input class="chatbox" id="johnChat" type="text" value="ask toto" onKeyPress="onChatEnter('john',event);">
 					<div class="buttons">		    			
-						<input type="submit" name="sendButton" id="sendButton" value="SEND" onClick="BOT_chatboxOnSend('litetalkchatbox');">
-		    				<input type="button" value="+"  onClick="BOT_switchTraceBox(this);">
-
+						<input type="submit" name="sendButton" value="SEND" onClick="botRequest('john')">
 					</div>
 				</div>
 			</div>
 
 			<div id="window2">
-				<img class="photo2" id="id1" src="./images/doge.jpeg" alt="doge" onClick="BOT_standardSwitchToChar('dogeBot');" />
-				
+				<img class="photo2" id="bobpict" src="./images/bob.png" alt="bob" />
+			
 				<div class="answersframe">
-					<textarea class="answers" id="id2" spellcheck="false"></textarea>
+					<textarea class="answers" id="bobballoon" spellcheck="false"></textarea>
 				</div>
 
 				<div class="chatboxframe">
-					<input class="chatbox" id="id3" type="text" value="ask toto" onKeyPress="BOT_chatboxOnKeypress(this,event);">
+					<input class="chatbox" id="bobChat" type="text" value="ask toto" onKeyPress="onChatEnter('bob',event);">
 					<div class="buttons">		    			
-						<input type="submit" name="sendButton" id="id4" value="SEND" onClick="BOT_chatboxOnSend('litetalkchatbox');">
-		    				<input type="button" value="+"  onClick="BOT_switchTraceBox(this);">
-
+						<input type="submit" name="sendButton" value="SEND" onClick="botRequest('bob')">
 					</div>
 				</div>
 			</div>
 
 			<div id="window3"><textarea id="notebook" spellcheck="false"></textarea></div>
 
-			<div id="litetalkstatustext" ></div>
-                	<textarea id="litetalktracebox" spellcheck="false" style="visibility:hidden;"></textarea>
+			
 		</div>
         
+		<div class="trace">
+		    	<input type="button" value="+"  onClick="switchTrace(this)">
+			<div id="traceFrame" style="visibility:hidden;">
+				<div id="litetalkstatustext"></div>
+		        	<textarea id="litetalktracebox" spellcheck="false"></textarea>
+			</div>
+		</div>
+
+		<input style="visibility:hidden; position:fixed;" id="litetalkchatbox" type="text" value="ask toto">
+
         <script type="text/javascript">
             BOT_theInterface 	= "STANDARD";
             BOT_traceFlag		= false; 
